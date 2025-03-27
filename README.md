@@ -6,29 +6,27 @@ A functional chess game built using Python and the Pygame library, featuring a g
 
 * **Graphical User Interface:** Visual chessboard and pieces rendered using Pygame.
 * **Core Chess Logic:**
-    * Standard piece movement (Pawn, Rook, Knight, Bishop, Queen, King).
-    * Capturing opponent pieces.
-    * Turn-based gameplay.
-    * Move validation (prevents illegal moves).
-    * Check detection and highlighting.
-    * Checkmate and Stalemate detection for game end conditions.
+  * Standard piece movement (Pawn, Rook, Knight, Bishop, Queen, King).
+  * Capturing opponent pieces.
+  * Turn-based gameplay.
+  * Move validation (prevents illegal moves).
+  * Check detection and highlighting.
+  * Checkmate and Stalemate detection for game end conditions.
 * **Special Moves:**
-    * Castling (Kingside and Queenside).
-    * En Passant captures.
-    * Pawn Promotion (with GUI choice for Queen, Rook, Bishop, or Knight).
+  * Castling (Kingside and Queenside).
+  * En Passant captures.
+  * Pawn Promotion (with GUI choice for Queen, Rook, Bishop, or Knight).
 * **Game Modes:**
-    * Human vs Human.
-    * Human vs AI (using Stockfish engine, plays as Black).
+  * Human vs Human.
+  * Human vs AI (using Stockfish engine, plays as Black).
 * **User Interface:**
-    * In-game menu (using Pygame buttons) for selecting game mode.
-    * In-game buttons for pawn promotion choices.
-    * In-game dialog (using Pygame buttons) at game end to "Play Again" or "Quit Game".
-    * Visual highlighting for selected piece, valid moves, and check status.
-    * Status bar displaying current turn, game mode, and messages (Check, Checkmate, etc.).
+  * In-game menu (using Pygame buttons) for selecting game mode.
+  * In-game buttons for pawn promotion choices.
+  * In-game dialog (using Pygame buttons) at game end to "Play Again" or "Quit Game".
+  * Visual highlighting for selected piece, valid moves, and check status.
+  * Status bar displaying current turn, game mode, and messages (Check, Checkmate, etc.).
 * **Sound Effects:** Basic sounds for piece movement and captures.
 * **Assets:** Supports loading custom piece images and sounds. Includes fallback drawing if assets are missing.
-
-## Screenshots
 
 ## Technology Stack
 
@@ -39,29 +37,36 @@ A functional chess game built using Python and the Pygame library, featuring a g
 
 ## Setup and Installation
 
-1.  **Install Dependencies:**
-    Install the required Python libraries using pip. It's recommended to create a `requirements.txt` file.
+1. **Install Dependencies:**  
+   Install the required Python libraries using pip. It's recommended to create a `requirements.txt` file.
 
-    * **Create `requirements.txt`:**
-        ```txt
-        pygame
-        python-chess
-        ```
-    * **Install:**
-        ```bash
-        pip install -r requirements.txt
-        ```
-        *(Note: `python-chess` is only strictly needed if you want to use the AI opponent feature).*
+   * **Create `requirements.txt`:**
+     ```txt
+     pygame
+     python-chess
+     ```
 
-5.  **Set up Assets:**
-    * Create an `assets` folder in the main project directory if it doesn't exist.
-    * **Piece Images:** Place your chess piece images inside the `assets` folder. They must be named `wP.png`, `wR.png`, `wN.png`, `wB.png`, `wQ.png`, `wK.png`, `bP.png`, `bR.png`, `bN.png`, `bB.png`, `bQ.png`, `bK.png`. PNG format with transparency is recommended.
-    * **Sound Files:** Place `move.mp3` and `capture.mp3` inside the `assets` folder.
+   * **Install:**
+     ```bash
+     pip install -r requirements.txt
+     ```
+     *(Note: `python-chess` is only strictly needed if you want to use the AI opponent feature).*
 
-6.  **Set up Stockfish (Optional, for AI):**
-    * Download a Stockfish engine executable suitable for your operating system (e.g., from [stockfishchess.org](https://stockfishchess.org/download/)).
-    * Place the Stockfish executable somewhere accessible. You can put it inside the `assets` folder for simplicity (as shown in the example path) or elsewhere on your system.
-    * **IMPORTANT:** Open the `chess_gui.py` file and update the `STOCKFISH_PATH` variable (near the top) to the exact path of your Stockfish executable. Use a raw string (e.g., `r"C:\path\to\stockfish.exe"`) on Windows.
+2. **Set up Assets:**
+   * Create an `assets` folder in the main project directory if it doesn't exist.
+   * **Piece Images:** Place your chess piece images inside the `assets` folder. They must be named:
+     ```
+     wP.png, wR.png, wN.png, wB.png, wQ.png, wK.png,
+     bP.png, bR.png, bN.png, bB.png, bQ.png, bK.png
+     ```
+     PNG format with transparency is recommended.
+   * **Sound Files:** Place `move.mp3` and `capture.mp3` inside the `assets` folder.
+
+3. **Set up Stockfish (Optional, for AI):**
+   * Download a Stockfish engine executable suitable for your operating system (e.g., from [stockfishchess.org](https://stockfishchess.org/download/)).
+   * Place the Stockfish executable somewhere accessible. You can put it inside the `assets` folder for simplicity (as shown in the example path) or elsewhere on your system.
+   * **IMPORTANT:** Open the `chess_gui.py` file and update the `STOCKFISH_PATH` variable (near the top) to the exact path of your Stockfish executable.  
+     Use a raw string (e.g., `r"C:\path\to\stockfish.exe"`) on Windows.
 
 ## Running the Game
 
@@ -70,8 +75,7 @@ Once setup is complete, navigate to the project directory in your terminal and r
 ```bash
 python chess_gui.py
 
-
-## Roadmap & Extensibility (Future Enhancements)
+---
 
 This project provides a solid foundation for a feature-rich chess application. The separation of game logic (`chess_logic.py`) and the graphical interface/interaction (`chess_gui.py`) makes it relatively straightforward to customize and extend.
 
