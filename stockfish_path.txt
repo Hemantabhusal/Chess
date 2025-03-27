@@ -1,0 +1,3 @@
+STOCKFISH_PATH = r"C:\Users\SwiftGo\Documents\Chess\assets\stockfish-3-win\Windows\Intel 64\stockfish-3-64-ja.exe" # Verify path
+STOCKFISH_PATH = r"C:\Users\SwiftGo\Documents\Chess\assets\stockfish-20-ja\Windows\stockfish-20-64-ja.exe"
+STOCKFISH_PATH = r"C:\Users\SwiftGo\Documents\Chess\assets\stockfish_10_ja\stockfish.exe"
