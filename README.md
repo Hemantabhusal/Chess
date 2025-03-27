@@ -72,7 +72,6 @@ A functional chess game built using Python and the Pygame library, featuring a g
 
 Once setup is complete, navigate to the project directory in your terminal and run:
 
-```bash
 python chess_gui.py
 
 ---
